@@ -43,15 +43,16 @@
     map.setMaxZoom(7);
    
   // set up or get listener of static geolistner to get coords to get location to get current timezone
-    new tt.Popup({ className: 'tt-popup'})
-            .setLngLat(center)
-            .setHTML('You are in Mingus timezone.')
-            .addTo(map);
+//     new tt.Popup({ className: 'tt-popup'})
+//             .setLngLat(center)
+//             .setHTML('You are in Mingus timezone.')
+//             .addTo(map);
 
- var popup = new tt.Popup({offset: popupOffsets, className: 'my-class'})
-.setLngLat(e.lngLat)
-.setHTML("<h1>Hello I'm a Popup!</h1>")
-.addTo(map);
+//  var popup = new tt.Popup({offset: popupOffsets, className: 'my-class'})
+// .setLngLat(e.lngLat)
+// .setHTML("<h1>Hello I'm a Popup!</h1>")
+// .addTo(map);
+
     map.on('load',function(){
       for(var i=0;i<geoJson["features"].length;i++){
         //Limit it, because too many breaks the map.
