@@ -19,7 +19,7 @@
 </head>
 <body>
   <h1>Check your timezone</h1>
-  <h2>Click the upper right corner of the map to allow location services. Scroll and match color to see UTC Timezone.</h2>
+  <h2>Click the upper right corner of the map to allow location services. Scroll map to see UTC Timezone.</h2>
 
   <div id="map-div"></div>
 
@@ -48,14 +48,14 @@
     map.addControl(new tt.FullscreenControl());
 
 
-    map.on('click', function(event) {
-        var lngLat = new tt.LngLat((event.lngLat.lng), (event.lngLat.lat));
+    // map.on('click', function(event) {
+    //     var lngLat = new tt.LngLat((event.lngLat.lng), (event.lngLat.lat));
 
-        new tt.Popup({ className: 'tt-popup'})
-            .setLngLat(lngLat)
-            .setHTML(lngLat.toString())
-            .addTo(map);
-      });
+    //     new tt.Popup({ className: 'tt-popup'})
+    //         .setLngLat(lngLat)
+    //         .setHTML(lngLat.toString())
+    //         .addTo(map);
+    //   });
 
  var colors = 
  ["#d6e604","#383c35","#83046f","#51293f","#a75cbf","#df183c","#6f46d1","#a29144","#0f0a2b","#b67cb9","#47d0c6","#86c260","#0c9a17","#b8c338","#b4fccc","#89de4f","#9ebc7f","#453ec4","#15fb49","#6a2292","#BC8F8F","#95eaad","#01b954","#3bd973","#c57098","#00db63","#47bc13","#7ce87e","#948699","#c613ba","#23b377","#dc92b4","#c3d724","#bc3122","#fd7b75","#4f86d8","#6027b1","#357636","#31eca8","#5263fd","#a70c7e","#36d984","#6af6b2","#f30ecd","#f48d1a","#e7563f","#59d194","#1f754f","#408395","#6823ce","#8a767f","#18eaa6","#710840","#0991c8","#d38732","#c3e7cf","#e939f6","#5b8700","#45fd24","#24bb94","#d6e604","#383c35","#83046f","#51293f","#a75cbf","#df183c","#6f46d1","#a29144","#0f0a2b","#b67cb9","#47d0c6","#86c260","#0c9a17","#b8c338","#b4fccc","#89de4f","#9ebc7f","#453ec4","#15fb49","#6a2292","#BC8F8F","#95eaad","#01b954","#3bd973","#c57098","#00db63","#47bc13","#7ce87e","#948699","#c613ba","#23b377","#dc92b4","#c3d724","#bc3122","#fd7b75","#4f86d8","#6027b1","#357636","#31eca8","#5263fd","#a70c7e","#36d984","#6af6b2","#f30ecd","#f48d1a","#e7563f","#59d194","#1f754f","#408395","#6823ce","#8a767f","#18eaa6","#710840","#0991c8","#d38732","#c3e7cf","#e939f6","#5b8700","#45fd24","#24bb94"]
@@ -84,7 +84,7 @@
       }
 
       // est
-      var popup = new tt.Popup({closeOnClick:false, className: 'my-class'})
+      var popup = new tt.Popup({closeOnClick:false,closeButton:false, className: 'my-class'})
         .setLngLat(new tt.LngLat(-57.613427346593326, 52.99875260655338))
         .setHTML("UTC-04:00")
         .addTo(map);
